@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_08_06_082126) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", null: false
     t.integer "gender", default: 0, null: false
-    t.text "my_introduction"
     t.text "self_introduction"
     t.string "profile_image"
     t.index ["email"], name: "index_users_on_email", unique: true
