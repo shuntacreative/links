@@ -1,6 +1,8 @@
 <nav class="navbar navbar-light">
-  <%= link_to "#", class: "nav-item nav-link", data: { turbolinks: :false } do %>
+  <%= link_to users_path, class: "nav-item nav-link", data: { turbolinks: :false } do %>
+    <span class="<%= 'active' if current_page?(users_path) %>">
     <i class="fas fa-link"></i>
+  </span>
   <% end %>
   <%= link_to "#", class: "nav-item nav-link" do %>
     <i class="far fa-comment-dots"></i>
