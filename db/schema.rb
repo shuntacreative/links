@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_08_06_052359) do
     t.string "name", null: false
     t.integer "gender", default: 0, null: false
     t.text "self_introduction"
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
