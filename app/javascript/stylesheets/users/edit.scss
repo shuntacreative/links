@@ -1,4 +1,4 @@
-.user-show-page {
+.user-edit-page {
   max-width: 414px;
   margin: 0 auto;
   .profile {
@@ -7,13 +7,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 24px 0 12px;
     &-default-img {
       height: 128px;
       width: 128px;
-      object-fit: cover;
       border-radius: 50%;
       background-image: url("~profile_default_img_128.png");
       background-size: contain;
+      &>input {
+        display: none;
+      }
     }
     &-img {
       height: 128px;
@@ -24,39 +27,40 @@
     &-name {
       font-size: 24px;
     }
-    &-text {
-      padding: 16px 24px 16px;
-      word-break: break-all;
+    &-img-upload {
+      margin-top: 12px;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #FD3378;
+      border-radius: 8px;
+      cursor: pointer;
+      &>input {
+        display: none;
+      }
     }
   }
 }
 
-.user-action {
-  display: flex;
-  justify-content: space-between;
-  color:#c3c7d0;
-  margin: 48px;
-  &-common {
-    color: #5c5c5c;
-    & > a {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      margin-bottom: 8px;
-      color: #5c5c5c;
-      box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
-      transition: color .5s;
-    }
-  }
+.hidden {
+  display: none;
 }
 
+.user-edit__submit-btn {
+  background-color: #FD3378;
+  height: 38px;
+  margin-bottom: 24px;
+}
+
+#profile-img-prev {
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 @media (min-width: 414px) {
-  .user-show-page {
+  .user-edit-page {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
     margin: 8px auto;
