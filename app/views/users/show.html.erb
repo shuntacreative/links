@@ -4,7 +4,9 @@
   <%= render "part/navbar" %>
 
   <div class="profile mt-4">
+
      <% if @user.profile_image.url.nil? %>
+
       <div class="profile-default-img"></div>
     <% else %>
       <%= image_tag @user.profile_image.url, class: "profile-img" %>

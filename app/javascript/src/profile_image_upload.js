@@ -9,4 +9,5 @@ $(document).on("change", "#profile_image_upload", function(e) {
     };
     return reader.readAsDataURL(e.target.files[0]);
   }
+
 });
