@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light">
+  <%= link_to "#", class: "nav-item nav-link", data: { turbolinks: :false } do %>
+    <i class="fas fa-link"></i>
+  <% end %>
+  <%= link_to "#", class: "nav-item nav-link" do %>
+    <i class="far fa-comment-dots"></i>
+  <% end %>
+  <%= link_to user_path(@user), class: "nav-item nav-link" do %>
+    <span class="<%= 'active' if current_page?(user_path(@user)) || current_page?(edit_user_registration_path) %>">
+      <i class="far fa-user-circle"></i>
+    </span>
+  <% end %>
+</nav>
