@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
-<<<<<<< HEAD
+
   validates :self_introduction, length: { maximum: 500 }
   enum gender: { man: 0, woman: 1 }
 
@@ -20,12 +20,5 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-  
-=======
 
-  validates :self_introduction, length: { maximum: 500 }
-
-  enum gender: { man: 0, woman: 1 }
-
->>>>>>> 511a8dec66873d53aa27cadd6c7ebfd76ec42927
 end
