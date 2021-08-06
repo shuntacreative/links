@@ -54,3 +54,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'carrierwave', '~> 2.0'
+# 中略
+
+gem 'bootsnap', '>= 1.4.2', require: false
+
+gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
