@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_07_060659) do
+ActiveRecord::Schema.define(version: 2021_08_07_064531) do
+
+  create_table "chat_rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "chat_room_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chat_room_id"], name: "index_chat_rooms_on_chat_room_id"
+    t.index ["user_id"], name: "index_chat_rooms_on_user_id"
+  end
 
   create_table "reactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "to_user_id", null: false
@@ -39,6 +48,8 @@ ActiveRecord::Schema.define(version: 2021_08_07_060659) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "chat_rooms", "chat_rooms"
+  add_foreign_key "chat_rooms", "users"
   add_foreign_key "reactions", "users", column: "from_user_id"
   add_foreign_key "reactions", "users", column: "to_user_id"
 end
