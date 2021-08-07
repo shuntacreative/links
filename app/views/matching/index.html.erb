@@ -8,6 +8,7 @@
     <div class="matching__list">
       <% unless @match_users.empty? %>
         <% @match_users.each do |user| %>
+
          <div class="matching__person">
 
            <% if user.profile_image.url.nil? %>
@@ -22,6 +23,7 @@
 
          </div>
         <% end %>
+
       <% end %>
     </div>
   </div>
