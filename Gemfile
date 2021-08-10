@@ -62,3 +62,4 @@ gem 'devise'
 gem 'carrierwave', '~> 2.0'
 
 gem "mini_magick"
+gem "aws-sdk-s3", require: false
